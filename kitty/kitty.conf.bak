@@ -1,0 +1,52 @@
+# BEGIN_KITTY_THEME
+# Rosé Pine
+include current-theme.conf
+# END_KITTY_THEME
+
+# ----------- Fonts ----------- 
+font_family      FiraCode Nerd Font Reg
+bold_font        FiraCode Nerd Font Bold 
+italic_font      Hack Italic
+bold_italic_font Hack Bold Italic
+
+# ----------- Audio ----------- 
+enable_audio_bell no
+
+# ----------- Background ----------- 
+background_opacity          1
+dynamic_background_opacity  yes
+
+# ----------- Cursor ----------- 
+shell_integration           no-cursor
+cursor_shape                underline
+cursor_underline_thickness  1.0
+
+# ----------- Tabs ----------- 
+tab_bar_edge bottom
+tab_bar_align left
+tab_bar_style custom
+tab_bar_min_tabs 1
+tab_activity_symbol none
+bell_on_tab no
+tab_separator ""
+tab_bar_margin_width 0.0
+tab_bar_margin_height 0.0 0.0
+tab_title_template "{' Neovim' if 'nvim' in title else ' Notes' if title == 'notes' else ' SQL' if 'sql' in title else '󰄛 Kitty' if title == 'kitty' else ' Docker' if 'docker' in title else ' Spring' if 'spring' in title else '󰋜 Home' if title[-1] == '~' else ' Btop' if title == 'btop' else '󰉋 ' + title.split('/')[-1] }"
+active_tab_font_style   bold
+
+# ----------- Editor ----------- 
+editor nvim
+
+# ----------- Mappings ----------- 
+map ctrl+shift+. set_background_opacity +0.1
+map ctrl+shift+, set_background_opacity -0.1
+map alt+1 goto_tab 1
+map alt+2 goto_tab 2
+map alt+3 goto_tab 3
+map alt+4 goto_tab 4
+map alt+5 goto_tab 4
+map alt+6 goto_tab 6
+map alt+7 goto_tab 7
+map alt+8 goto_tab 8
+map alt+9 goto_tab 9
+
