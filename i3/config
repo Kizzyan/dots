@@ -1,0 +1,169 @@
+# MODIFIER KEY
+set $mod Mod4
+
+# FONT
+font pango: FiraCode Nerd Font 10 
+
+# XDG
+exec --no-startup-id dex --autostart --environment i3
+
+# XSS-LOCK
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+# NETWORK MANAGER 
+exec --no-startup-id nm-applet
+
+# AUDIO CONTROL
+set $refresh_i3status killall -SIGUSR1 i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+
+# FLOATING MODIFIER
+floating_modifier $mod
+
+# DRAG & DROP WINDOWS
+tiling_drag modifier titlebar
+
+# TERMINAL
+bindsym $mod+Return exec kitty 
+
+# KILL WINDOW
+bindsym $mod+Shift+q kill
+
+# BORDERS & GAPS
+gaps inner 10
+smart_borders on
+smart_gaps on
+for_window [class="^.*"] border pixel 0
+bindsym $mod+t border normal 0
+bindsym $mod+u border none
+bindsym $mod+y border pixel 4
+
+# ROFI
+bindsym $mod+d exec rofi -show drun
+
+# CHANGE FOCUS
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+ccedilla focus right
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# MOVE FOCUSED WINDOW
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+ccedilla move right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# SPLIT
+bindsym $mod+h split h
+bindsym $mod+v split v
+
+# FULLSCREEN
+bindsym $mod+f fullscreen toggle
+
+# LAYOUT
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# TILING / FLOATING
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+
+# ----------------------- WORKSPACES -------------------------
+set $ws1 " Terminal"
+set $ws2 " Firefox"
+set $ws3 "󰠮 Obsidian"
+set $ws4 " Spotify"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+# ---------------------------------------------------------------
+
+# RELOAD / RESTART / LOGS
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+# RESIZE
+bindsym $mod+r mode "resize"
+mode "resize" {
+        bindsym j resize shrink width 5 px or 5 ppt
+        bindsym k resize grow height 5 px or 5 ppt
+        bindsym l resize shrink height 5 px or 5 ppt
+        bindsym ccedilla resize grow width 5 px or 5 ppt
+
+        bindsym Left resize shrink width 5 px or 5 ppt
+        bindsym Down resize grow height 5 px or 5 ppt
+        bindsym Up resize shrink height 5 px or 5 ppt
+        bindsym Right resize grow width 5 px or 5 ppt
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+ 
+# GRUVBOX MATERIAL DARK
+set $bg       #282828
+set $fg       #d4be98
+set $red      #ea6962
+set $orange   #e78a4e
+set $green    #a9b665
+set $blue     #7daea3
+set $purple   #d3869b
+set $aqua     #89b482
+set $darkgray #282828
+
+# WINDOW                BRDR        BG          TEXT    INDICTR     CHLD_BRDR
+client.focused          $red        $red        $bg     $red        $red
+client.focused_inactive $aqua       $aqua       $bg     $aqua       $aqua
+client.unfocused        $bg         $bg         $bg     $bg         $bg
+client.urgent           $orange     $orange     $bg     $orange     $orange
+client.placeholder      $bg         $bg         $bg     $bg         $bg
+client.background       $bg
+
+# CUSTOM KEYBINDS
+bindsym $mod+Shift+f exec firefox
+bindsym $mod+Shift+o exec flatpak run md.obsidian.Obsidian
+bindsym $mod+Shift+s exec flatpak run com.spotify.Client
+bindsym $mod+Shift+p exec $HOME/Archive/CloneHero/clonehero
+
+# EXEC ALWAYS COMMANDS
+# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always xrandr --output HDMI-1 --mode 1360x768
+exec_always feh --bg-fill $HOME/Pictures/gruvbox/ALLqk82.png   
