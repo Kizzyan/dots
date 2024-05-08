@@ -29,17 +29,27 @@ tiling_drag modifier titlebar
 # TERMINAL
 bindsym $mod+Return exec kitty 
 
+# SCREENSHOTS
+bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)"
+bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date)"
+bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date)"
+
+# CLIPBOARD SCREENSHOTS
+bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
+bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
+
 # KILL WINDOW
 bindsym $mod+Shift+q kill
 
 # BORDERS & GAPS
-gaps inner 10
+gaps inner 5
 smart_borders on
 smart_gaps on
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 2
 bindsym $mod+t border normal 0
 bindsym $mod+u border none
-bindsym $mod+y border pixel 4
+bindsym $mod+y border pixel 2
 
 # ROFI
 bindsym $mod+d exec rofi -show drun
@@ -81,38 +91,48 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # ----------------------- WORKSPACES -------------------------
-set $ws1 " Terminal"
-set $ws2 " Firefox"
-set $ws3 "󰠮 Obsidian"
-set $ws4 " Spotify"
-set $ws5 "5"
+set $ws1 " "
+set $ws2 " "
+set $ws3 "󰠮 "
+set $ws4 " "
+set $ws5 "󰙯 "
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
-bindsym $mod+1 workspace number $ws1
-bindsym $mod+2 workspace number $ws2
-bindsym $mod+3 workspace number $ws3
-bindsym $mod+4 workspace number $ws4
-bindsym $mod+5 workspace number $ws5
-bindsym $mod+6 workspace number $ws6
-bindsym $mod+7 workspace number $ws7
-bindsym $mod+8 workspace number $ws8
-bindsym $mod+9 workspace number $ws9
-bindsym $mod+0 workspace number $ws10
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
 
-bindsym $mod+Shift+1 move container to workspace number $ws1
-bindsym $mod+Shift+2 move container to workspace number $ws2
-bindsym $mod+Shift+3 move container to workspace number $ws3
-bindsym $mod+Shift+4 move container to workspace number $ws4
-bindsym $mod+Shift+5 move container to workspace number $ws5
-bindsym $mod+Shift+6 move container to workspace number $ws6
-bindsym $mod+Shift+7 move container to workspace number $ws7
-bindsym $mod+Shift+8 move container to workspace number $ws8
-bindsym $mod+Shift+9 move container to workspace number $ws9
-bindsym $mod+Shift+0 move container to workspace number $ws10
+# assign [class="kitty"] $ws1
+assign [class="firefox"] $ws2
+assign [class="obsidian"] $ws3
+assign [class="Spotify"] $ws4
+
+# for_window [class="kitty"] focus
+for_window [class="firefox"] focus
+for_window [class="obsidian"] focus
+for_window [class="Spotify"] focus
+
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
 # ---------------------------------------------------------------
 
 # RELOAD / RESTART / LOGS
@@ -137,7 +157,11 @@ mode "resize" {
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
 }
- 
+
+bar {
+
+}
+
 # GRUVBOX MATERIAL DARK
 set $bg       #282828
 set $fg       #d4be98
@@ -151,7 +175,7 @@ set $darkgray #282828
 
 # WINDOW                BRDR        BG          TEXT    INDICTR     CHLD_BRDR
 client.focused          $red        $red        $bg     $red        $red
-client.focused_inactive $aqua       $aqua       $bg     $aqua       $aqua
+client.focused_inactive $bg         $bg         $bg     $bg         $bg
 client.unfocused        $bg         $bg         $bg     $bg         $bg
 client.urgent           $orange     $orange     $bg     $orange     $orange
 client.placeholder      $bg         $bg         $bg     $bg         $bg
