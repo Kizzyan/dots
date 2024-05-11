@@ -1,0 +1,84 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "type": "kitty",
+    "source": "~/.config/fastfetch/fastfetch.png",
+    "height": 15,
+    "padding": {
+      "top": 0,
+      "left": 2,
+      "right": 1,
+    }
+  },
+  "display": {
+    "separator": "  "
+  },
+  "modules": [
+    {
+      "type": "custom",
+      "format": "                                                                        "
+    },
+    {
+      "type": "custom",
+      "format": "╭────────────── \u001B[1;31mHardware Information\u001B[0m ──────────────┐"
+    },
+    {
+      "type": "cpu",
+      "key": "\u001B[0m│ \u001B[1;36m \u001B[1;35mCPU"
+    },
+    {
+      "type": "memory",
+      "key": "\u001B[0m│ \u001B[1;36m \u001B[1;32mRAM",
+    },
+    {
+      "type": "custom",
+      "format": "├────────────── \u001B[1;31mSoftware Information\u001B[0m ──────────────"
+    },
+    {
+      "type": "os",
+      "key": "\u001B[0m│ \u001B[1;36m \u001B[1;34mSystem"
+    },
+    "de",
+    {
+      "type": "terminal",
+      "key": "\u001B[0m│ \u001B[1;36m \u001B[1;35mTerminal"
+    },
+    {
+      "type": "player",
+      "key": "\u001B[0m│ \u001B[1;36m󰝚 \u001B[1;36mPlayer"
+    },
+    {
+      "type": "packages",
+      "key": "\u001B[0m│ \u001B[1;36m \u001B[1;34mPackages"
+    },
+    {
+      "type": "custom",
+      "format": "├───────────────── \u001B[1;31mTheme Details\u001B[0m ──────────────────"
+    },
+    {
+      "type": "theme",
+      "key": "\u001B[0m│ \u001B[1;36m \u001B[1;33mDesktop Theme"
+    },
+    "wmtheme",
+    {
+      "type": "icons",
+      "key": "\u001B[0m│ \u001B[1;36m \u001B[1;35mIcon Theme"
+    },
+    {
+      "type": "terminalfont",
+      "key": "\u001B[0m│ \u001B[1;31m \u001B[1;31mFont"
+    },
+    {
+      "type": "shell",
+      "key": "\u001B[0m│ \u001B[1;36m \u001B[1;30mCurrent Shell"
+    },
+    {
+      "type": "custom",
+      "format": "╰──────────────────────────────────────────────────┘"
+    },
+    {
+      "type": "custom",
+      "format": " \u001B[30m    \u001B[31m     \u001B[33m     \u001B[32m     \u001B[36m     \u001B[34m     \u001B[35m     \u001B[37m      \u001B[39m \u001B[37m"
+    }
+  ]
+}

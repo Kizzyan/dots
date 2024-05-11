@@ -2,7 +2,7 @@
 set $mod Mod4
 
 # FONT
-font pango: FiraCode Nerd Font 10 
+font pango: Maple Mono NF Regular 11 
 
 # XDG
 exec --no-startup-id dex --autostart --environment i3
@@ -15,8 +15,8 @@ exec --no-startup-id nm-applet
 
 # AUDIO CONTROL
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
@@ -30,9 +30,9 @@ tiling_drag modifier titlebar
 bindsym $mod+Return exec kitty 
 
 # SCREENSHOTS
-bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)"
-bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date)"
-bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date)"
+bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/Screenshots/$(date).png"
+bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/Screenshots/$(date).png"
+bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/Screenshots/$(date).png"
 
 # CLIPBOARD SCREENSHOTS
 bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
@@ -43,7 +43,8 @@ bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection c
 bindsym $mod+Shift+q kill
 
 # BORDERS & GAPS
-gaps inner 5
+gaps inner 10
+gaps outer 10
 smart_borders on
 smart_gaps on
 for_window [class="^.*"] border pixel 2
@@ -93,14 +94,13 @@ bindsym $mod+space focus mode_toggle
 # ----------------------- WORKSPACES -------------------------
 set $ws1 " "
 set $ws2 " "
-set $ws3 "󰠮 "
-set $ws4 " "
-set $ws5 "󰙯 "
-set $ws6 "6"
-set $ws7 "7"
-set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
+set $ws3 " "
+set $ws4 " "
+set $ws5 " "
+set $ws6 " "
+set $ws7 " "
+set $ws8 " "
+set $ws9 " "
 
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
@@ -111,17 +111,12 @@ bindsym $mod+6 workspace $ws6
 bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
-bindsym $mod+0 workspace $ws10
 
-# assign [class="kitty"] $ws1
 assign [class="firefox"] $ws2
-assign [class="obsidian"] $ws3
-assign [class="Spotify"] $ws4
-
-# for_window [class="kitty"] focus
-for_window [class="firefox"] focus
-for_window [class="obsidian"] focus
-for_window [class="Spotify"] focus
+assign [class="Spotify"] $ws3
+assign [class="obsidian"] $ws4
+assign [class="discord"] $ws5
+assign [class="Stremio"] $ws6
 
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
@@ -132,7 +127,6 @@ bindsym $mod+Shift+6 move container to workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
-bindsym $mod+Shift+0 move container to workspace $ws10
 # ---------------------------------------------------------------
 
 # RELOAD / RESTART / LOGS
@@ -158,10 +152,6 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-bar {
-
-}
-
 # GRUVBOX MATERIAL DARK
 set $bg       #282828
 set $fg       #d4be98
@@ -183,11 +173,14 @@ client.background       $bg
 
 # CUSTOM KEYBINDS
 bindsym $mod+Shift+f exec firefox
+bindsym $mod+Shift+z exec zathura
 bindsym $mod+Shift+o exec flatpak run md.obsidian.Obsidian
 bindsym $mod+Shift+s exec flatpak run com.spotify.Client
+bindsym $mod+shift+w exec flatpak run com.stremio.Stremio
+bindsym $mod+shift+d exec flatpak run com.discordapp.Discord
 bindsym $mod+Shift+p exec $HOME/Archive/CloneHero/clonehero
 
 # EXEC ALWAYS COMMANDS
-# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
 exec_always xrandr --output HDMI-1 --mode 1360x768
 exec_always feh --bg-fill $HOME/Pictures/gruvbox/ALLqk82.png   
