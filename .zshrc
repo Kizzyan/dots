@@ -140,9 +140,10 @@ alias addp="ssh-add ~/.ssh/Kizzyan"
 alias addw="ssh-add ~/.ssh/npi-yan-gabriel"
 alias szi="sudo zypper install"
 alias szr="sudo zypper remove"
-alias ahdmi="pactl set-default-sink alsa_output.pci-0000_04_00.1.hdmi-stereo"
+alias ahdmi="pactl set-default-sink alsa_output.pci-0000_05_00.1.hdmi-stereo"
 alias afone="pactl set-default-sink alsa_output.usb-GeneralPlus_USB_Audio_Device-00.analog-stereo"
 alias ff="fastfetch"
+alias update="sudo zypper ref && sudo zypper dup"
 
 #Custom variables
 DB_USERNAME="dbeaver"
