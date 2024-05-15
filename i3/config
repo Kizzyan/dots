@@ -54,6 +54,7 @@ bindsym $mod+y border pixel 2
 
 # ROFI
 bindsym $mod+d exec rofi -show drun
+bindsym $mod+Shift+m exec rofi -show calc -modi calc -no-show-match -no-sort
 
 # CHANGE FOCUS
 bindsym $mod+j focus left
@@ -117,6 +118,9 @@ assign [class="Spotify"] $ws3
 assign [class="obsidian"] $ws4
 assign [class="discord"] $ws5
 assign [class="Stremio"] $ws6
+assign [class="heroic"] $ws7
+assign [class="clonehero"] $ws7
+assign [class="steam"] $ws7
 
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
