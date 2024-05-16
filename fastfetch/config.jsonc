@@ -24,11 +24,11 @@
     },
     {
       "type": "cpu",
-      "key": "\u001B[0m│ \u001B[1;36m \u001B[1;35mCPU"
+      "key": "\u001B[0m│ \u001B[1;36m  \u001B[1;35mCPU"
     },
     {
       "type": "memory",
-      "key": "\u001B[0m│ \u001B[1;36m \u001B[1;32mRAM",
+      "key": "\u001B[0m│ \u001B[1;36m  \u001B[1;32mRAM",
     },
     {
       "type": "custom",
@@ -36,20 +36,20 @@
     },
     {
       "type": "os",
-      "key": "\u001B[0m│ \u001B[1;36m \u001B[1;34mSystem"
+      "key": "\u001B[0m│ \u001B[1;36m  \u001B[1;34mSystem"
     },
     "de",
     {
       "type": "terminal",
-      "key": "\u001B[0m│ \u001B[1;36m \u001B[1;35mTerminal"
+      "key": "\u001B[0m│ \u001B[1;36m  \u001B[1;35mTerminal"
     },
     {
       "type": "player",
-      "key": "\u001B[0m│ \u001B[1;36m󰝚 \u001B[1;36mPlayer"
+      "key": "\u001B[0m│ \u001B[1;36m󰝚  \u001B[1;36mPlayer"
     },
     {
       "type": "packages",
-      "key": "\u001B[0m│ \u001B[1;36m \u001B[1;34mPackages"
+      "key": "\u001B[0m│ \u001B[1;36m  \u001B[1;34mPackages"
     },
     {
       "type": "custom",
@@ -57,20 +57,20 @@
     },
     {
       "type": "theme",
-      "key": "\u001B[0m│ \u001B[1;36m \u001B[1;33mDesktop Theme"
+      "key": "\u001B[0m│ \u001B[1;36m  \u001B[1;33mTheme"
     },
     "wmtheme",
     {
       "type": "icons",
-      "key": "\u001B[0m│ \u001B[1;36m \u001B[1;35mIcon Theme"
+      "key": "\u001B[0m│ \u001B[1;36m  \u001B[1;35mIcon"
     },
     {
       "type": "terminalfont",
-      "key": "\u001B[0m│ \u001B[1;31m \u001B[1;31mFont"
+      "key": "\u001B[0m│ \u001B[1;36m  \u001B[1;31mFont"
     },
     {
       "type": "shell",
-      "key": "\u001B[0m│ \u001B[1;36m \u001B[1;30mCurrent Shell"
+      "key": "\u001B[0m│ \u001B[1;36m  \u001B[1;30mShell"
     },
     {
       "type": "custom",
