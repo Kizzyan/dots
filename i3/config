@@ -19,6 +19,9 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+bindsym XF86AudioStop exec --no-startup-id playerctl pause -p spotify && $refresh_i3status
+bindsym XF86AudioPause exec --no-startup-id playerctl play -p spotify && $refresh_i3status
+
 
 # FLOATING MODIFIER
 floating_modifier $mod
@@ -43,11 +46,11 @@ bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection c
 bindsym $mod+Shift+q kill
 
 # BORDERS & GAPS
-gaps inner 10
+gaps inner 05
 gaps outer 05
 smart_borders on
 smart_gaps on
-for_window [class="^.*"] border pixel 3
+for_window [class="^.*"] border pixel 2
 bindsym $mod+t border normal 0
 bindsym $mod+u border none
 bindsym $mod+y border pixel 2
@@ -161,14 +164,14 @@ set $bg       #282828
 set $fg       #d4be98
 set $red      #ea6962
 set $orange   #e78a4e
-set $green    #a9b665
+set $green    #afddae
 set $blue     #7daea3
 set $purple   #d3869b
 set $aqua     #89b482
 set $darkgray #282828
 
 # WINDOW                BRDR        BG          TEXT    INDICTR     CHLD_BRDR
-client.focused          $red        $red        $bg     $red        $red
+client.focused          $green      $green      $bg     $green      $green
 client.focused_inactive $bg         $bg         $bg     $bg         $bg
 client.unfocused        $bg         $bg         $bg     $bg         $bg
 client.urgent           $orange     $orange     $bg     $orange     $orange
@@ -180,7 +183,6 @@ bindsym $mod+Shift+f exec firefox
 bindsym $mod+Shift+z exec zathura
 bindsym $mod+Shift+o exec flatpak run md.obsidian.Obsidian
 bindsym $mod+Shift+s exec flatpak run com.spotify.Client
-bindsym $mod+shift+w exec flatpak run com.stremio.Stremio
 bindsym $mod+shift+d exec flatpak run com.discordapp.Discord
 bindsym $mod+Shift+p exec $HOME/Archive/CloneHero/clonehero
 

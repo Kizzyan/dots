@@ -11,7 +11,7 @@
     }
   },
   "display": {
-    "separator": "  "
+    "separator": " │ "
   },
   "modules": [
     {
@@ -20,32 +20,35 @@
     },
     {
       "type": "custom",
-      "format": "╭────────────── \u001B[1;31mHardware Information\u001B[0m ──────────────┐"
+      "format": "╭─────────────╮"
     },
     {
       "type": "cpu",
-      "key": "\u001B[0m│ \u001B[1;36m  \u001B[1;35mCPU"
+      "format": "{1}",
+      "key": "\u001B[0m│ \u001B[1;36m  \u001B[1;35mCPU     "
     },
     {
       "type": "memory",
-      "key": "\u001B[0m│ \u001B[1;36m  \u001B[1;32mRAM",
+      "key": "\u001B[0m│ \u001B[1;36m  \u001B[1;32mRAM     ",
     },
     {
       "type": "custom",
-      "format": "├────────────── \u001B[1;31mSoftware Information\u001B[0m ──────────────"
+      "format": "├─────────────┤"
     },
     {
       "type": "os",
-      "key": "\u001B[0m│ \u001B[1;36m  \u001B[1;34mSystem"
+      "format": "{2}",
+      "key": "\u001B[0m│ \u001B[1;36m  \u001B[1;34mSystem  "
     },
     "de",
     {
       "type": "terminal",
+      "format": "{1}",
       "key": "\u001B[0m│ \u001B[1;36m  \u001B[1;35mTerminal"
     },
     {
       "type": "player",
-      "key": "\u001B[0m│ \u001B[1;36m󰝚  \u001B[1;36mPlayer"
+      "key": "\u001B[0m│ \u001B[1;36m󰝚  \u001B[1;36mPlayer  "
     },
     {
       "type": "packages",
@@ -53,28 +56,32 @@
     },
     {
       "type": "custom",
-      "format": "├───────────────── \u001B[1;31mTheme Details\u001B[0m ──────────────────"
+      "format": "├─────────────┤"
     },
     {
       "type": "theme",
-      "key": "\u001B[0m│ \u001B[1;36m  \u001B[1;33mTheme"
+      "format": "{2}",
+      "key": "\u001B[0m│ \u001B[1;36m  \u001B[1;33mTheme   "
     },
     "wmtheme",
     {
       "type": "icons",
-      "key": "\u001B[0m│ \u001B[1;36m  \u001B[1;35mIcon"
+      "format": "{2}",
+      "key": "\u001B[0m│ \u001B[1;36m  \u001B[1;35mIcon    "
     },
     {
       "type": "terminalfont",
-      "key": "\u001B[0m│ \u001B[1;36m  \u001B[1;31mFont"
+      "format": "{1}",
+      "key": "\u001B[0m│ \u001B[1;36m  \u001B[1;31mFont    "
     },
     {
       "type": "shell",
-      "key": "\u001B[0m│ \u001B[1;36m  \u001B[1;30mShell"
+      "format": "{1}",
+      "key": "\u001B[0m│ \u001B[1;36m  \u001B[1;30mShell   "
     },
     {
       "type": "custom",
-      "format": "╰──────────────────────────────────────────────────┘"
+      "format": "╰─────────────╯"
     },
     {
       "type": "custom",
