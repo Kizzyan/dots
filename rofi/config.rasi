@@ -5,6 +5,7 @@ configuration {
   font: "Maple Mono NF Regular 11";
   show-icons: true;
   icon-theme: "Gruvbox-Plus-Dark";
+  terminal: "kitty";
 }
 
 @theme "/usr/share/rofi/themes/gruvbox-dark.rasi"

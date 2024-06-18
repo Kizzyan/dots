@@ -179,15 +179,17 @@ client.placeholder      $bg         $bg         $bg     $bg         $bg
 client.background       $bg
 
 # CUSTOM KEYBINDS
-bindsym $mod+Shift+f exec firefox
-bindsym $mod+Shift+z exec zathura
-bindsym $mod+Shift+o exec flatpak run md.obsidian.Obsidian
 bindsym $mod+Shift+s exec flatpak run com.spotify.Client
 bindsym $mod+shift+d exec flatpak run com.discordapp.Discord
+bindsym $mod+Shift+f exec firefox
+bindsym $mod+shift+g exec steam
+bindsym $mod+Shift+z exec zathura
+bindsym $mod+Shift+o exec flatpak run md.obsidian.Obsidian
 bindsym $mod+Shift+p exec $HOME/Archive/CloneHero/clonehero
 
 # EXEC ALWAYS COMMANDS
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf -b
 exec_always xrandr --output HDMI-1 --mode 1360x768
-exec_always feh --bg-fill $HOME/Pictures/gruvbox/ALLqk82.png   
+# exec_always feh --bg-fill $HOME/Pictures/gruvbox/ALLqk82.png   
+exec_always feh --bg-fill $HOME/Pictures/@sovka_2.jpeg   
