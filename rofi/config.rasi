@@ -8,4 +8,10 @@ configuration {
   terminal: "kitty";
 }
 
-@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"
+window {
+    width: 200px;
+    height: 200px;
+}
+
+
+@theme "~/.config/rofi/themes/gruvbox-dark.rasi"

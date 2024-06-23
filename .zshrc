@@ -128,8 +128,10 @@ source $ZSH/oh-my-zsh.sh
 #Custom aliases
 alias dss="docker container start ms_sql_container"
 alias dms="docker container start my_sql_container"
+alias dms8="docker container start my_sql8_container"
 alias sqls="docker exec -it ms_sql_container bash" 
 alias msql="docker exec -it my_sql_container bash"
+alias msql8="docker exec -it my_sql8_container bash"
 alias cnvim="cd ~/.config/nvim && nvim ."
 alias work="kitty --session ~/.config/kitty/sessions/work-session.conf"
 alias notes="nvim ~/Archive/Notas"
@@ -139,7 +141,7 @@ alias addw="ssh-add ~/.ssh/npi-yan-gabriel"
 alias szi="sudo zypper install"
 alias szr="sudo zypper remove"
 alias szu="sudo zypper ref && sudo zypper dup"
-alias af="pactl set-default-sink $(pactl list short sinks | grep -i 'usb' | awk '{ print $1 }')"
+alias af="pactl set-default-sink $(pactl list short sinks | grep -i 'analog' | awk '{ print $1 }')"
 alias ah="pactl set-default-sink $(pactl list short sinks | grep -i 'hdmi' | awk '{ print $1 }')" 
 alias lz="lazygit"
 alias ff="fastfetch"
@@ -148,11 +150,12 @@ alias rng="ranger"
 alias venv="source env/bin/activate"
 alias bdu="betterdiscordctl --d-install flatpak install"
 alias spu="sudo chmod a+wr /var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share/spotify & sudo chmod a+wr -R /var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share/spotify/Apps & spicetify apply"
+alias idea="/opt/idea-IC-241.18034.62/bin/idea.sh"
 
 #Custom variables
 DB_USERNAME="dbeaver"
 DB_PASSWORD="dbeaver"
-export JDTLS_JVM_ARGS="-javaagent:$HOME/.local/share/java/lombok.jar"
+# export JDTLS_JVM_ARGS="-javaagent:$HOME/.local/share/java/lombok.jar"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

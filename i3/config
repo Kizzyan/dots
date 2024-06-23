@@ -57,7 +57,7 @@ bindsym $mod+y border pixel 2
 
 # ROFI
 bindsym $mod+d exec rofi -show drun
-bindsym $mod+Shift+m exec rofi -show calc -modi calc -no-show-match -no-sort
+bindsym $mod+Shift+Delete exec $HOME/.config/rofi/scripts/powermenu.sh
 
 # CHANGE FOCUS
 bindsym $mod+j focus left
@@ -139,7 +139,7 @@ bindsym $mod+Shift+9 move container to workspace $ws9
 # RELOAD / RESTART / LOGS
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # RESIZE
 bindsym $mod+r mode "resize"
@@ -183,9 +183,10 @@ bindsym $mod+Shift+s exec flatpak run com.spotify.Client
 bindsym $mod+shift+d exec flatpak run com.discordapp.Discord
 bindsym $mod+Shift+f exec firefox
 bindsym $mod+shift+g exec steam
-bindsym $mod+Shift+z exec zathura
+bindsym $mod+Shift+i exec /opt/idea-IC-241.18034.62/bin/idea.sh
 bindsym $mod+Shift+o exec flatpak run md.obsidian.Obsidian
 bindsym $mod+Shift+p exec $HOME/Archive/CloneHero/clonehero
+bindsym $mod+Shift+z exec zathura
 
 # EXEC ALWAYS COMMANDS
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh &

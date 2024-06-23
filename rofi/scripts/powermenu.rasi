@@ -1,0 +1,21 @@
+configuration {
+  font: "Maple Mono NF Regular 12";
+}
+
+@theme "/usr/share/rofi/themes/gruvbox-dark.rasi"
+
+window {
+    background-color: @background;
+    border:           0;
+    padding:          0;
+    width:            150px;
+    height:           120px;
+}
+
+listview {
+    border:       2px solid 0 0;
+    padding:      2px 0 0;
+    border-color: @separatorcolor;
+    spacing:      2px;
+    scrollbar:    false;
+}
