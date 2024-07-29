@@ -150,7 +150,9 @@ alias rng="ranger"
 alias venv="source env/bin/activate"
 alias bdu="betterdiscordctl --d-install flatpak install"
 alias spu="sudo chmod a+wr /var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share/spotify & sudo chmod a+wr -R /var/lib/flatpak/app/com.spotify.Client/x86_64/stable/active/files/extra/share/spotify/Apps & spicetify apply"
-alias idea="/opt/idea-IC-241.18034.62/bin/idea.sh"
+alias ocean="echo 'OCEAN MAN 🌊 😍 Take me by the hand ✋ lead me to the land that you understand 🙌 🌊 OCEAN MAN 🌊 😍 The voyage 🚲 to the corner of the 🌎 globe is a real trip 👌 🌊 OCEAN MAN 🌊 😍 The crust of a tan man 👳 imbibed by the sand 👍 Soaking up the 💦 thirst of the land 💯' | xclip -selection clipboard"
+alias predio="echo 'rastaPe Vamo acordar esse prédio rastaPe rastaPe Fazer inveja pro povo rastaPe rastaPe Enquanto eles tão indo trabalhar rastaPe rastaPe A gente faz amor gostoso de novo rastaPe rastaPe' | xclip -selection clipboard"
+alias curse="echo 'CURSE OF RA 𓀀 𓀁 𓀂 𓀃 𓀄 𓀅 𓀆 𓀇 𓀈 𓀉 𓀊 𓀋 𓀌 𓀍 𓀎 𓀏 𓀐 𓀑 𓀒 𓀓 𓀔 𓀕 𓀖 𓀗 𓀘 𓀙 𓀚 𓀛 𓀜 𓀝 𓀞 𓀟 𓀠 𓀡 𓀢 𓀣 𓀤 𓀥 𓀦 𓀧 𓀨 𓀩 𓀪 𓀫 𓀬 𓀭 𓀮 𓀯 𓀰 𓀱 𓀲 𓀳 𓀴 𓀵 𓀶 𓀷 𓀸 𓀹 𓀺 𓀻 𓀼 𓀽 𓀾 𓀿 𓁀 𓁁 𓁂 𓁃 𓁄 𓁅 𓁆 𓁇 𓁈 𓁉 𓁊 𓁋 𓁌 𓁍 𓁎 𓁏 𓁐 𓁑 𓀄 𓀅 𓀆' | xclip -selection clipboard"
 
 #Custom variables
 DB_USERNAME="dbeaver"

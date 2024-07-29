@@ -21,6 +21,8 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ to
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 bindsym XF86AudioStop exec --no-startup-id playerctl pause -p spotify && $refresh_i3status
 bindsym XF86AudioPause exec --no-startup-id playerctl play -p spotify && $refresh_i3status
+bindsym XF86AudioNext exec --no-startup-id playerctl next -p spotify && $refresh_i3status
+bindsym XF86AudioPrev exec --no-startup-id playerctl previous -p spotify && $refresh_i3status
 
 
 # FLOATING MODIFIER
@@ -116,14 +118,15 @@ bindsym $mod+7 workspace $ws7
 bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 
-assign [class="firefox"] $ws2
-assign [class="Spotify"] $ws3
-assign [class="obsidian"] $ws4
-assign [class="discord"] $ws5
-assign [class="Stremio"] $ws6
-assign [class="heroic"] $ws7
-assign [class="clonehero"] $ws7
-assign [class="steam"] $ws7
+assign [class="jetbrains-idea-ce"]  $ws1
+assign [class="firefox"]            $ws2
+assign [class="Spotify"]            $ws3
+assign [class="obsidian"]           $ws4
+assign [class="discord"]            $ws5
+assign [class="Stremio"]            $ws6
+assign [class="heroic"]             $ws7
+assign [class="clonehero"]          $ws7
+assign [class="steam"]              $ws7
 
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
@@ -160,18 +163,27 @@ mode "resize" {
 }
 
 # GRUVBOX MATERIAL DARK
-set $bg       #282828
-set $fg       #d4be98
-set $red      #ea6962
-set $orange   #e78a4e
-set $green    #afddae
-set $blue     #7daea3
-set $purple   #d3869b
-set $aqua     #89b482
-set $darkgray #282828
+# set $bg       #282828
+# set $fg       #d4be98
+# set $red      #ea6962
+# set $orange   #e78a4e
+# set $green    #afddae
+# set $blue     #7daea3
+# set $purple   #d3869b
+# set $aqua     #89b482
+# set $darkgray #282828
+
+# ROSE PINE
+set $bg       #191724
+set $fg       #e0def4
+set $red      #eb6f92
+set $orange   #f6c177
+set $green    #31748f
+set $blue     #9ccfd8
+set $purple   #c4a7e7
 
 # WINDOW                BRDR        BG          TEXT    INDICTR     CHLD_BRDR
-client.focused          $green      $green      $bg     $green      $green
+client.focused          $red        $red        $bg     $red        $red
 client.focused_inactive $bg         $bg         $bg     $bg         $bg
 client.unfocused        $bg         $bg         $bg     $bg         $bg
 client.urgent           $orange     $orange     $bg     $orange     $orange
@@ -192,5 +204,7 @@ bindsym $mod+Shift+z exec zathura
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf -b
 exec_always xrandr --output HDMI-1 --mode 1360x768
-# exec_always feh --bg-fill $HOME/Pictures/gruvbox/ALLqk82.png   
-exec_always feh --bg-fill $HOME/Pictures/@sovka_2.jpeg   
+# FOR GRUVBOX
+# exec_always feh --bg-fill $HOME/Pictures/@sovka_2.jpeg   
+# FOR ROSE PINE
+exec_always feh --bg-fill $HOME/Pictures/a_cartoon_of_a_woman_in_a_pool.jpg   

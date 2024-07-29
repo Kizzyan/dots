@@ -1,10 +1,11 @@
 configuration {
   display-drun: "Applications";
   display-window: "Windows";
-  drun-display-format: "{icon} {name}";
+  drun-display-format: "{name}";
   font: "Maple Mono NF Regular 11";
-  show-icons: true;
-  icon-theme: "Gruvbox-Plus-Dark";
+  show-icons: false;
+  /* icon-theme: "Gruvbox-Plus-Dark"; */
+  /* icon-theme: "rose-pine-icons"; */
   terminal: "kitty";
 }
 
@@ -14,4 +15,5 @@ window {
 }
 
 
-@theme "~/.config/rofi/themes/gruvbox-dark.rasi"
+/* @theme "~/.config/rofi/themes/gruvbox-dark.rasi" */
+@theme "~/.config/rofi/themes/rose-pine.rasi" 
