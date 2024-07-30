@@ -1,20 +1,15 @@
 window {
     background-color: @background;
     border:           2;
-    padding:          2;
-    width:            40%;
-    height:           50%;
-}
-
-mainbox {
-    border:  0;
-    padding: 3;
+    padding:          12;
+    width:            30%;
+    height:           45%;
 }
 
 message {
     border:       2px 0 0;
     border-color: @separatorcolor;
-    padding:      1px;
+    padding:      0px;
 }
 
 textbox {
@@ -26,14 +21,13 @@ listview {
     border:       2px solid 0 0;
     padding:      2px 0 0;
     border-color: @separatorcolor;
-    spacing:      2px;
+    spacing:      0px;
     scrollbar:    @scrollbar;
-    columns:      2;
 }
 
 element {
     border:  0;
-    padding: 2px;
+    padding: 5px;
 }
 
 element.normal.normal {
@@ -52,8 +46,8 @@ element.normal.active {
 }
 
 element.selected.normal {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
+    background-color: @selected-active-background;
+    text-color:       @selected-active-foreground;
 }
 
 element.selected.urgent {
@@ -67,25 +61,25 @@ element.selected.active {
 }
 
 element.alternate.normal {
-    background-color: @alternate-normal-background;
-    text-color:       @alternate-normal-foreground;
+    background-color: @normal-background;
+    text-color:       @normal-foreground;
 }
 
 element.alternate.urgent {
-    background-color: @alternate-urgent-background;
-    text-color:       @alternate-urgent-foreground;
+    background-color: @urgent-background;
+    text-color:       @urgent-foreground;
 }
 
 element.alternate.active {
-    background-color: @alternate-active-background;
-    text-color:       @alternate-active-foreground;
+    background-color: @active-background;
+    text-color:       @active-foreground;
 }
 
 scrollbar {
     width:        1px;
     border:       0;
     handle-color: @scrollbar-handle;
-    handle-width: 8px;
+    handle-width: 4px;
     padding:      0;
 }
 
@@ -96,8 +90,10 @@ mode-switcher {
 
 inputbar {
     spacing:    0;
+    margin: 0 0 5px 0;
+    placeholder: "Search";
     text-color: @normal-foreground;
-    padding:    2px;
+    padding:    8px;
     children:   [ entry, case-indicator ];
 }
 
@@ -109,9 +105,14 @@ button {
     text-color: @normal-foreground;
 }
 
+entry {
+    placeholder: " Search...";
+    placeholder-color: @muted;
+}
+
 button.selected {
-    background-color: @selected-normal-background;
-    text-color:       @selected-normal-foreground;
+    background-color: @selected-normal-foreground;
+    text-color:       @selected-normal-background;
 }
 
 element-text, element-icon {

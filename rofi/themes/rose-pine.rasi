@@ -1,134 +1,43 @@
-@import "default"
-
 * {
-	bg: #191724;
-	cur: #1f1d2e;
-	fgd: #e0def4;
-	cmt: #6e6a86;
-	cya: #9ccfd8;
-	grn: #31748f;
-	ora: #ebbcba;
-	pur: #c4a7e7;
-	red: #eb6f92;
-	yel: #f6c177;
+    /* Theme settings */
+    highlight: bold italic;
+    scrollbar: false;
 
-	foreground: @fgd;
-	background: @bg;
-	active-background: @grn;
-	urgent-background: @red;
+    /* Gruvbox dark colors */
+    rose-pine-bg0-hard:     #191724;
+    rose-pine-bg0:          #1f1d2e;
+    rose-pine-bg2:          #26233a;
+    rose-pine-fg0:          #e0def4;
+    rose-pine-fg1:          #908caa;
+    rose-pine-red-dark:     #c75273;
+    rose-pine-red-light:    #eb6f92;
+    rose-pine-yellow-dark:  #dbac69;
+    rose-pine-yellow-light: #f6c177;
+    rose-pine-gray:         #524f67;
 
-	selected-background: @active-background;
-	selected-urgent-background: @urgent-background;
-	selected-active-background: @active-background;
-	separatorcolor: @active-background;
-	bordercolor: @red;
+    /* Theme colors */
+    background:                  @rose-pine-bg0-hard;
+    background-color:            @background;
+    foreground:                  @rose-pine-fg0;
+    muted:                       @rose-pine-fg1;
+    border-color:                @rose-pine-red-dark;
+    separatorcolor:              @border-color;
+    scrollbar-handle:            @border-color;
 
-  highlight: bold italic;
-}
+    normal-background:           @background;
+    normal-foreground:           @foreground;
+    selected-normal-background:  @rose-pine-bg2;
+    selected-normal-foreground:  @rose-pine-fg0;
 
-window {
-    background-color: @background;
-    border:           2;
-    padding:          2;
-    width:            40%;
-    height:           50%;
-}
+    active-background:           @rose-pine-red-dark;
+    active-foreground:           @background;
+    selected-active-background:  @rose-pine-red-light;
+    selected-active-foreground:  @active-foreground;
 
-mainbox {
-    border:  0;
-    padding: 3;
-}
-
-message {
-    border:       2px 0 0;
-    border-color: @separatorcolor;
-    padding:      1px;
+    urgent-background:           @rose-pine-red-dark;
+    urgent-foreground:           @background;
+    selected-urgent-background:  @rose-pine-red-light;
+    selected-urgent-foreground:  @urgent-foreground;
 }
 
-textbox {
-    highlight:  @active-background;
-    text-color: @foreground;
-}
-
-listview {
-    border:       2px solid 0 0;
-    padding:      2px 0 0;
-    border-color: @separatorcolor;
-    spacing:      2px;
-    scrollbar:    true;
-    columns:      2;
-}
-
-element {
-    border:  0;
-    padding: 2px;
-}
-#element.normal.normal {
-	background-color: @background;
-	text-color:       @foreground;
-}
-#element.normal.urgent {
-	background-color: @urgent-background;
-	text-color:       @urgent-foreground;
-}
-#element.normal.active {
-	background-color: @active-background;
-	text-color:       @background;
-}
-#element.selected.normal {
-	background-color: @selected-background;
-	text-color:       @foreground;
-}
-#element.selected.urgent {
-	background-color: @selected-urgent-background;
-	text-color:       @foreground;
-}
-#element.selected.active {
-	background-color: @selected-active-background;
-	text-color:       @background;
-}
-#element.alternate.normal {
-	background-color: @background;
-	text-color:       @foreground;
-}
-#element.alternate.urgent {
-	background-color: @urgent-background;
-	text-color:       @foreground;
-}
-#element.alternate.active {
-	background-color: @active-background;
-	text-color:       @foreground;
-}
-
-inputbar {
-    spacing:    0;
-    text-color: @normal-foreground;
-    padding:    2px;
-    children:   [ entry, case-indicator ];
-}
-
-#sidebar {
-	border:       2px dash 0px 0px ;
-	border-color: @separatorcolor;
-}
-
-#button.selected {
-	background-color: @selected-background;
-	text-color:       @foreground;
-}
-
-inputbar {
-    spacing:    0;
-    text-color: @normal-foreground;
-    padding:    2px;
-    children:   [ entry, case-indicator ];
-}
-
-case-indicator,
-entry,
-prompt,
-button {
-    spacing:    0;
-    text-color: @normal-foreground;
-}
-
+@import "common.rasi"

@@ -207,4 +207,4 @@ exec_always xrandr --output HDMI-1 --mode 1360x768
 # FOR GRUVBOX
 # exec_always feh --bg-fill $HOME/Pictures/@sovka_2.jpeg   
 # FOR ROSE PINE
-exec_always feh --bg-fill $HOME/Pictures/a_cartoon_of_a_woman_in_a_pool.jpg   
+exec_always feh --bg-fill $HOME/Pictures/@klegsart_1.jpg   
