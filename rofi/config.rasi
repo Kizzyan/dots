@@ -1,6 +1,6 @@
 configuration {
   /* GENERAL SETTINGS */
-	modi: "drun,run,filebrowser,window";
+	modi: "drun,filebrowser,window";
   case-insensitive: false;
   cycle: true;
   filter: "";
@@ -31,7 +31,7 @@ configuration {
   /*---------- Drun settings ----------*/
 	drun-categories: "";
 	drun-match-fields: "name,generic,exec,categories,keywords";
-	drun-display-format: "  {name}";
+	drun-display-format: "{name}";
 	drun-show-actions: false;
 	drun-url-launcher: "xdg-open";
 	drun-use-desktop-cache: false;
@@ -41,27 +41,28 @@ configuration {
 		parse-system: true;
   }
 
-  /*---------- Display setting ----------*/
-	display-window: "Windows";
-	display-windowcd: "Window CD";
-	display-run: "Run";
-	display-ssh: "SSH";
-	display-drun: "Apps";
-	display-combi: "Combi";
-	display-keys: "Keys";
-	display-filebrowser: "Files";
-
 	/*---------- Run settings ----------*/
 	run-command: "{cmd}";
+	run-display-format: "{name}";
 	run-list-command: "";
 	run-shell-command: "{terminal} -e {cmd}";
 
   /*---------- File browser settings ----------*/
-    filebrowser {
+  filebrowser {
     directory: "/~";
     directories-first: true;
     sorting-method: "name";   
   }
+
+  /*---------- Display setting ----------*/
+	display-window: "  ";
+	display-drun: "  ";
+	display-filebrowser: "  ";
+	display-windowcd: "Window CD";
+	display-run: "Run";
+	display-ssh: "SSH";
+	display-combi: "Combi";
+	display-keys: "Keys";
 
 }
 

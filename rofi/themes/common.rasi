@@ -75,26 +75,25 @@ element.alternate.active {
     text-color:       @active-foreground;
 }
 
-scrollbar {
+/* scrollbar {
     width:        1px;
     border:       0;
     handle-color: @scrollbar-handle;
     handle-width: 4px;
     padding:      0;
-}
+} */
 
 mode-switcher {
-    border:       2px 0 0;
+    border:       0px 0 0;
     border-color: @separatorcolor;
 }
 
 inputbar {
     spacing:    0;
     margin: 0 0 5px 0;
-    placeholder: "Search";
     text-color: @normal-foreground;
     padding:    8px;
-    children:   [ entry, case-indicator ];
+    children:   [ prompt, entry ];
 }
 
 case-indicator,
@@ -106,7 +105,7 @@ button {
 }
 
 entry {
-    placeholder: " Search...";
+    placeholder: "Search...";
     placeholder-color: @muted;
 }
 
