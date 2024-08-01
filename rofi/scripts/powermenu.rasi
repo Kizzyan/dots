@@ -9,8 +9,9 @@ window {
     background-color: @background;
     border:           0;
     padding:          0;
-    width:            150px;
-    height:           108px;
+    width:            258px;
+    height:           75px;
+    border-radius:    10px;
 }
 
 mainbox {
@@ -18,9 +19,16 @@ mainbox {
 }
 
 listview {
-    border:       2px solid 0 0;
-    padding:      2px 0 0;
+    padding:      0;
     border-color: @separatorcolor;
-    spacing:      2px;
-    scrollbar:    false;
+    layout:       horizontal;
+}
+
+element {
+    padding: 14px;
+}
+
+element-text {
+  text-align: center;
+  font: "Maple Mono NF Regular 24";
 }

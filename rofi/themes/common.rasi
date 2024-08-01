@@ -4,6 +4,7 @@ window {
     padding:          12;
     width:            30%;
     height:           45%;
+    border-radius:    5px;
 }
 
 message {
@@ -28,6 +29,7 @@ listview {
 element {
     border:  0;
     padding: 5px;
+    border-radius:    5px;
 }
 
 element.normal.normal {
