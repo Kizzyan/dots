@@ -103,8 +103,8 @@ set $ws2 " "
 set $ws3 " "
 set $ws4 " "
 set $ws5 " "
-set $ws6 " "
-set $ws7 " "
+set $ws6 " "
+set $ws7 " "
 set $ws8 " "
 set $ws9 " "
 
@@ -122,11 +122,11 @@ assign [class="jetbrains-idea-ce"]  $ws1
 assign [class="firefox"]            $ws2
 assign [class="Spotify"]            $ws3
 assign [class="obsidian"]           $ws4
-assign [class="discord"]            $ws5
-assign [class="Stremio"]            $ws6
-assign [class="heroic"]             $ws7
-assign [class="clonehero"]          $ws7
-assign [class="steam"]              $ws7
+assign [class="vesktop"]            $ws5
+assign [class="heroic"]             $ws6
+assign [class="clonehero"]          $ws6
+assign [class="steam"]              $ws6
+assign [class="Stremio"]            $ws7
 
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
@@ -192,7 +192,7 @@ client.background       $bg
 
 # CUSTOM KEYBINDS
 bindsym $mod+Shift+s exec flatpak run com.spotify.Client
-bindsym $mod+shift+d exec flatpak run com.discordapp.Discord
+bindsym $mod+shift+d exec flatpak run dev.vencord.Vesktop
 bindsym $mod+Shift+f exec firefox
 bindsym $mod+shift+g exec steam
 bindsym $mod+Shift+i exec /opt/idea-IC-241.18034.62/bin/idea.sh
