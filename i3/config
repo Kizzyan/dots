@@ -137,6 +137,9 @@ bindsym $mod+Shift+6 move container to workspace $ws6
 bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
+
+for_window [title="Picture-in-Picture"] sticky enable
+for_window [instance="Navigator"] sticky enable
 # ---------------------------------------------------------------
 
 # RELOAD / RESTART / LOGS
@@ -195,15 +198,18 @@ bindsym $mod+Shift+s exec flatpak run com.spotify.Client
 bindsym $mod+shift+d exec flatpak run dev.vencord.Vesktop
 bindsym $mod+Shift+f exec firefox
 bindsym $mod+shift+g exec steam
+bindsym $mod+shift+m exec java -jar $HOME/Archive/Temp/mine/SKlauncher-3.2.9.jar
 bindsym $mod+Shift+i exec /opt/idea-IC-241.18034.62/bin/idea.sh
 bindsym $mod+Shift+o exec flatpak run md.obsidian.Obsidian
 bindsym $mod+Shift+p exec $HOME/Archive/CloneHero/clonehero
 bindsym $mod+Shift+z exec zathura
+bindsym $mod+Shift+a exec setxkbmap -option 'grp:alt_shift_toggle'
 
 # EXEC ALWAYS COMMANDS
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf -b
 exec_always xrandr --output HDMI-1 --mode 1360x768
+exec_always "setxkbmap -layout br,ru"
 # FOR GRUVBOX
 # exec_always feh --bg-fill $HOME/Pictures/@sovka_2.jpeg   
 # FOR ROSE PINE
