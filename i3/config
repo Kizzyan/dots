@@ -1,5 +1,6 @@
 # MODIFIER KEY
 set $mod Mod4
+set $alt Mod1
 
 # FONT
 font pango: Maple Mono NF Regular 11 
@@ -50,22 +51,22 @@ bindsym $mod+Shift+q kill
 # BORDERS & GAPS
 gaps inner 05
 gaps outer 05
-smart_borders on
-smart_gaps on
+# smart_borders on
+# smart_gaps on
+# bindsym $mod+t border normal 2
+# bindsym $mod+u border none
+# bindsym $mod+y border pixel 2
 for_window [class="^.*"] border pixel 2
-bindsym $mod+t border normal 0
-bindsym $mod+u border none
-bindsym $mod+y border pixel 2
 
 # ROFI
 bindsym $mod+d exec rofi -show drun
 bindsym $mod+Shift+Delete exec $HOME/.config/rofi/scripts/powermenu.sh
 
 # CHANGE FOCUS
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+ccedilla focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
@@ -82,8 +83,8 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # SPLIT
-bindsym $mod+h split h
-bindsym $mod+v split v
+bindsym $mod+n split h
+bindsym $mod+m split v
 
 # FULLSCREEN
 bindsym $mod+f fullscreen toggle
@@ -203,7 +204,9 @@ bindsym $mod+Shift+i exec /opt/idea-IC-241.18034.62/bin/idea.sh
 bindsym $mod+Shift+o exec flatpak run md.obsidian.Obsidian
 bindsym $mod+Shift+p exec $HOME/Archive/CloneHero/clonehero
 bindsym $mod+Shift+z exec zathura
-bindsym $mod+Shift+a exec setxkbmap -option 'grp:alt_shift_toggle'
+
+bindsym Ctrl+$alt+l exec setxkbmap -option 'grp:alt_shift_toggle'
+bindsym Ctrl+$alt+r exec redshift -O 4500 -P
 
 # EXEC ALWAYS COMMANDS
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
