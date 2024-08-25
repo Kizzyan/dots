@@ -51,7 +51,7 @@ bindsym $mod+Shift+q kill
 # BORDERS & GAPS
 gaps inner 05
 gaps outer 05
-# smart_borders on
+smart_borders on
 # smart_gaps on
 # bindsym $mod+t border normal 2
 # bindsym $mod+u border none
@@ -196,7 +196,7 @@ client.background       $bg
 
 # CUSTOM KEYBINDS
 bindsym $mod+Shift+s exec flatpak run com.spotify.Client
-bindsym $mod+shift+d exec flatpak run dev.vencord.Vesktop
+bindsym $mod+Shift+d exec flatpak run dev.vencord.Vesktop
 bindsym $mod+Shift+f exec firefox
 bindsym $mod+shift+g exec steam
 bindsym $mod+shift+m exec java -jar $HOME/Archive/Temp/mine/SKlauncher-3.2.9.jar
@@ -205,8 +205,8 @@ bindsym $mod+Shift+o exec flatpak run md.obsidian.Obsidian
 bindsym $mod+Shift+p exec $HOME/Archive/CloneHero/clonehero
 bindsym $mod+Shift+z exec zathura
 
-bindsym Ctrl+$alt+l exec setxkbmap -option 'grp:alt_shift_toggle'
-bindsym Ctrl+$alt+r exec redshift -O 4500 -P
+bindsym $alt+Shift+l exec setxkbmap -option 'grp:alt_shift_toggle'
+bindsym $alt+Shift+r exec redshift -O 4500 -P
 
 # EXEC ALWAYS COMMANDS
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh &

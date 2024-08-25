@@ -145,6 +145,7 @@ alias af="pactl set-default-sink $(pactl list short sinks | grep -i 'analog' | a
 alias ah="pactl set-default-sink $(pactl list short sinks | grep -i 'hdmi' | awk '{ print $1 }')" 
 alias lz="lazygit"
 alias ff="fastfetch"
+alias nv="nvim ."
 alias cls="clear"
 alias rng="ranger"
 alias venv="source env/bin/activate"
@@ -168,8 +169,8 @@ export SDKMAN_DIR="$HOME/.sdkman"
 export PATH="$PATH:/opt/mssql-tools18/bin"
 source ~/.zprofile
 
-
 # Load Angular CLI autocompletion.
 source <(ng completion script)
 
 export PATH=$PATH:/home/yan/.spicetify
+export PATH=$PATH:/home/yan/.config/emacs/bin
