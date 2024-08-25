@@ -216,4 +216,5 @@ exec_always "setxkbmap -layout br,ru"
 # FOR GRUVBOX
 # exec_always feh --bg-fill $HOME/Pictures/@sovka_2.jpeg   
 # FOR ROSE PINE
-exec_always feh --bg-fill $HOME/Pictures/@klegsart_1.jpg   
+# exec_always feh --bg-fill $HOME/Pictures/@klegsart_1.jpg   
+exec_always feh --bg-fill $HOME/Pictures/a_cartoon_of_a_girl_standing_next_to_a_car.jpg   
