@@ -1,0 +1,4 @@
+window {
+    height: 65px;
+    width: 20%;
+}

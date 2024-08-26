@@ -3,7 +3,7 @@
     highlight: bold italic;
     scrollbar: false;
 
-    /* Gruvbox dark colors */
+    /* Rosé pine colors */
     rose-pine-bg0-hard:     #191724;
     rose-pine-bg0:          #1f1d2e;
     rose-pine-bg2:          #26233a;
