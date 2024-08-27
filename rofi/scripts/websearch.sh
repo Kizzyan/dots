@@ -2,7 +2,7 @@
 
 
 # Define search options
-options="g\ny\nd"
+options="g\ny\nw"
 
 # Use Rofi to select the search engine
 selected=$(echo -e "$options" | rofi -dmenu -i -p " " -theme-str '@import ".config/rofi/scripts/websearch.rasi"')
@@ -11,15 +11,15 @@ selected=$(echo -e "$options" | rofi -dmenu -i -p " " -theme-str '@import ".c
 case "$selected" in
     g)
         search_url="http://www.google.com/search?q="
-        icon="  "
+        icon=" "
         ;;
     y)
         search_url="https://www.youtube.com/results?search_query="
-        icon="  "
+        icon=" "
         ;;
-    d)
-        search_url="https://www.youtube.com/results?search_query="
-        icon=" 󰇥 "
+    w)
+        search_url="https://en.wikipedia.org/wiki/"
+        icon=" "
         ;;
     *)
         exit 1
