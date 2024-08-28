@@ -11,9 +11,9 @@ window {
     background-color: @background;
     border:           0;
     padding:          0;
-    width:            258px;
-    height:           75px;
-    border-radius:    10px;
+    width:            210px;
+    height:           230px;
+    border-radius:    0px;
 }
 
 mainbox {
@@ -23,15 +23,14 @@ mainbox {
 listview {
     padding:      0;
     border-color: @separatorcolor;
-    layout:       horizontal;
+    layout:       vertical;
 }
 
 element {
-    padding: 14px;
     border-radius:    0px;
 }
 
 element-text {
   text-align: center;
-  font: "Maple Mono NF Regular 24";
+  font: "Maple Mono NF Regular 12";
 }
