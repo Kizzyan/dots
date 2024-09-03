@@ -11,9 +11,9 @@ window {
     background-color: @background;
     border:           0;
     padding:          0;
-    width:            185px;
-    height:           75px;
-    border-radius:    10px;
+    width:            183px;
+    height:           73px;
+    border-radius:    0px;
 }
 
 mainbox {

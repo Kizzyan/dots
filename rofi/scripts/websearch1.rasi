@@ -1,4 +1,5 @@
 window {
     height: 65px;
     width: 20%;
+    border-radius: 0px;
 }

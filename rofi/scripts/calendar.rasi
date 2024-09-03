@@ -11,8 +11,8 @@ window {
     background-color: @background;
     border:           0;
     padding:          0;
-    width:            210px;
-    height:           230px;
+    width:            212px;
+    height:           240px;
     border-radius:    0px;
 }
 
@@ -28,6 +28,7 @@ listview {
 
 element {
     border-radius:    0px;
+    border:           1px;
 }
 
 element-text {

@@ -11,7 +11,7 @@ window {
     background-color: @background;
     border:           0;
     padding:          0;
-    width:            256px;
+    width:            229px;
     height:           73px;
     border-radius:    0px;
 }
@@ -27,11 +27,11 @@ listview {
 }
 
 element {
-    padding: 14px;
+    padding: 12px 30px 12px 25px;
     border-radius:    0px;
 }
 
 element-text {
   text-align: center;
-  font: "Maple Mono NF Regular 24";
+  font: "Maple Mono NF Regular 26";
 }
