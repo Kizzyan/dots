@@ -20,10 +20,9 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-bindsym XF86AudioPause exec --no-startup-id playerctl play-pause -p spotify && $refresh_i3status
-bindsym XF86AudioNext exec --no-startup-id playerctl next -p spotify && $refresh_i3status
-bindsym XF86AudioPrev exec --no-startup-id playerctl previous -p spotify && $refresh_i3status
-
+bindsym $mod+F7 exec --no-startup-id playerctl play-pause -p spotify && $refresh_i3status
+bindsym $mod+F6 exec --no-startup-id playerctl next -p spotify && $refresh_i3status
+bindsym $mod+F5 exec --no-startup-id playerctl previous -p spotify && $refresh_i3status
 
 # FLOATING MODIFIER
 floating_modifier $mod
@@ -220,4 +219,4 @@ exec_always "setxkbmap -layout br,ru"
 # exec_always feh --bg-fill $HOME/Pictures/@sovka_2.jpeg   
 # FOR ROSE PINE
 # exec_always feh --bg-fill $HOME/Pictures/@klegsart_1.jpg   
-exec_always feh --bg-fill $HOME/Pictures/a_cartoon_of_a_girl_standing_next_to_a_car.jpg   
+exec_always feh --bg-fill --randomize -r ~/Pictures/rosepine     
