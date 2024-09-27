@@ -62,6 +62,7 @@ bindsym $mod+s            exec $HOME/.config/rofi/scripts/websearch.sh
 bindsym $mod+Shift+Delete exec $HOME/.config/rofi/scripts/powermenu.sh
 bindsym $mod+F1           exec $HOME/.config/rofi/scripts/sinkchanger.sh
 bindsym $mod+c            exec $HOME/.config/rofi/scripts/calendar.sh
+bindsym $mod+b            exec $HOME/.config/rofi/scripts/bookmark.sh
 
 # CHANGE FOCUS
 bindsym $mod+h focus left
@@ -106,7 +107,7 @@ set $ws3 " "
 set $ws4 " "
 set $ws5 " "
 set $ws6 " "
-set $ws7 " "
+set $ws7 " "
 set $ws8 " "
 set $ws9 " "
 
@@ -128,7 +129,7 @@ assign [class="vesktop"]            $ws5
 assign [class="heroic"]             $ws6
 assign [class="clonehero"]          $ws6
 assign [class="steam"]              $ws6
-assign [class="Stremio"]            $ws7
+assign [class="krita"]              $ws7
 
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
