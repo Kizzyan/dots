@@ -1,8 +1,8 @@
 #! /bin/sh
 
 
-options="g\ny\nw"
-selected=$(printf "󰊭\n󰗃\n󰖬" | rofi -dmenu -i -theme-str '@import ".config/rofi/scripts/websearch_2.rasi"')
+options="g\ny\na\nw"
+selected=$(printf "󰊭\n󰗃\n\n󰖬" | rofi -dmenu -i -theme-str '@import ".config/rofi/scripts/websearch_2.rasi"')
 
 case "$selected" in
     "󰊭")
@@ -12,6 +12,10 @@ case "$selected" in
     "󰗃")
         search_url="https://www.youtube.com/results?search_query="
         icon="  "
+        ;;
+    "")
+        search_url="https://www.amazon.com.br/s?k="
+        icon="  "
         ;;
     "󰖬")
         search_url="https://en.wikipedia.org/wiki/"
