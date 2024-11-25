@@ -205,9 +205,9 @@ bindsym $mod+Shift+d exec flatpak run dev.vencord.Vesktop
 bindsym $mod+Shift+f exec firefox
 bindsym $mod+shift+g exec steam
 # bindsym $mod+shift+m exec java -jar $HOME/Archive/Temp/mine/SKlauncher-3.2.9.jar
-bindsym $mod+Shift+i exec /opt/idea-IC-241.18034.62/bin/idea.sh
+bindsym $mod+Shift+i exec /opt/idea-IC-243.21565.193/bin/idea.sh
 bindsym $mod+Shift+o exec flatpak run md.obsidian.Obsidian
-bindsym $mod+Shift+p exec $HOME/Archive/CloneHero/clonehero
+bindsym $mod+Shift+p exec $HOME/Games/CloneHero/clonehero
 bindsym $mod+Shift+z exec zathura
 bindsym $mod+Shift+n exec nvim
 
@@ -219,6 +219,8 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf -b
 exec_always xrandr --output HDMI-1 --mode 1360x768
 exec_always "setxkbmap -layout br,ru"
+exec_always "xset -dpms"
+exec_always "xset s off"
 # FOR GRUVBOX
 # exec_always feh --bg-fill $HOME/Pictures/@sovka_2.jpeg   
 # FOR ROSE PINE
