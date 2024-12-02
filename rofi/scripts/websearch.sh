@@ -2,7 +2,7 @@
 
 
 options="g\ny\na\nw"
-selected=$(printf "󰊭\n󰗃\n\n󰖬" | rofi -dmenu -i -theme-str '@import ".config/rofi/scripts/websearch_2.rasi"')
+selected=$(printf "󰊭\n󰗃\n\n󰖬\n󰪐\n󰟴\n" | rofi -dmenu -i -theme-str '@import ".config/rofi/scripts/websearch_2.rasi"')
 
 case "$selected" in
     "󰊭")
@@ -20,6 +20,18 @@ case "$selected" in
     "󰖬")
         search_url="https://en.wikipedia.org/wiki/"
         icon="  "
+        ;;
+    "󰪐")
+        search_url="https://9animetv.to/search?keyword="
+        icon=" 󰪐 "
+        ;;
+    "󰟴")
+        search_url="https://web.stremio.com/#/search?query="
+        icon=" 󰟴 "
+        ;;
+    "")
+        search_url="https://store.steampowered.com/search/?term="
+        icon="  "
         ;;
     *)
         exit 1

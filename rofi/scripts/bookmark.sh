@@ -37,5 +37,5 @@ if [ -n "$name" ]; then
 - **󰄱 Created time:** $(date +%d/%m/%y)
 - **󰄵 Completed:**
 EOF
-  sed -i "12i\- [ ] ${icon}[[${name}]]<br> *${author}*<br> --inserir imagem-- <br>${tags}" "${path}/Alexandryte.md"
+  sed -i "12i\- [ ] ${icon}[[${name}]]<br> *${author}*<br> --inserir imagem-- <br><div class="date"></div><br>${tags}" "${path}/Alexandryte.md"
 fi
